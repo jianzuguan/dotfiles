@@ -31,7 +31,7 @@ compinit
 _comp_options+=(globdots)               # Include hidden files.
 
 # Load aliases and shortcuts if existent.
-[ -f "$HOME/.config/zsh/aliasrc" ] && source "$HOME/.config/zsh/aliasrc"
+[ -f "$HOME/.config/zsh/aliases" ] && source "$HOME/.config/zsh/aliases"
 
 
 source $HOME/.config/zsh/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
