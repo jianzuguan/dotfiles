@@ -26,7 +26,12 @@ ex ()
 
 export EDITOR=vim
 
-alias lsdf='gls -Ahlv --color --group-directories-first'
+system_type=$(uname)
+if [ "$system_type" = "Darwin" ]; then
+  alias lsdf='gls -Ahlv --color --group-directories-first'
+else
+  alias lsdf='ls -Ahlv --color --group-directories-first'
+fi
 alias ls='ls'
 # alias ll='ls -l'
 # ls, the common ones I use a lot shortened for rapid fire usage
@@ -96,8 +101,12 @@ alias gits='git status'
 alias gitl='git log --oneline -n 10'
 
 alias dc='docker-compose' 
-alias dcx='docker-compose exec'
+alias dcu='docker-compose up -d'
+alias dcd='docker-compose down'
+alias dcr='docker-compose restart'
+alias dcl='docker-compose logs -f'
+alias dcx='docker-compose exec web'
 
-# alias lbrynet='/opt/LBRY/resources/static/daemon/lbrynet'
-# alias update-grub='sudo grub-mkconfig -o /boot/grub/grub.cfg'
+alias lbrynet='/opt/LBRY/resources/static/daemon/lbrynet'
+alias update-grub='sudo grub-mkconfig -o /boot/grub/grub.cfg'
 

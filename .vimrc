@@ -16,7 +16,7 @@ syntax on                       " turn syntax highlighting on by default
 set statusline=%<%F%h%m%r\ [%{&ff}]\ (%{strftime(\"%H:%M\ %d/%m/%Y\",getftime(expand(\"%:p\")))})%=%l,%c%V\ %P
 
 "-- Jianzu's setup --
-set number
+set number relativenumber
 highlight LineNr ctermfg=grey "ctermbg=white
 
 "------------------------------------------------------------------------------
