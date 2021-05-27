@@ -17,6 +17,7 @@ set statusline=%<%F%h%m%r\ [%{&ff}]\ (%{strftime(\"%H:%M\ %d/%m/%Y\",getftime(ex
 
 "-- Jianzu's setup --
 set number relativenumber
+set clipboard=unnamedplus
 highlight LineNr ctermfg=grey "ctermbg=white
 
 "------------------------------------------------------------------------------
@@ -45,3 +46,4 @@ if has("autocmd")
 
      autocmd Syntax gitcommit setlocal textwidth=74
 endif " has("autocmd")
+
