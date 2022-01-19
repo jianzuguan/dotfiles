@@ -122,6 +122,8 @@ EDITOR=vim
 # Load aliases and shortcuts if existent.
 [ -f "$HOME/.config/zsh/aliases" ] && source "$HOME/.config/zsh/aliases"
 
+if [ -d "$HOME/bin" ]; then PATH="$HOME/bin:$PATH" fi
+
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.config/p10k.zsh ]] || source ~/.config/p10k.zsh
@@ -134,6 +136,7 @@ fi
 
 export NVM_DIR="$HOME/.local/share/nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh" # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 
 # Android
 export ANDROID_HOME=$HOME/Library/Android/sdk
@@ -148,7 +151,6 @@ export PATH=$PATH:$ANDROID_HOME/platform-tools
 #eval "$(pyenv init --path)"
 #eval "$(pyenv virtualenv-init -)"
 
-if [ -d "$HOME/bin" ]; then PATH="$HOME/bin:$PATH" fi
-
 unset LESS
+
 

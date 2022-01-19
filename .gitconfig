@@ -12,3 +12,5 @@
 	$(cd $(dirname "$MERGED") && pwd)/$(basename "$MERGED")
     trustExitCode = true
 
+[pull]
+	rebase = true
