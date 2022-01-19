@@ -148,3 +148,7 @@ export PATH=$PATH:$ANDROID_HOME/platform-tools
 #eval "$(pyenv init --path)"
 #eval "$(pyenv virtualenv-init -)"
 
+if [ -d "$HOME/bin" ]; then PATH="$HOME/bin:$PATH" fi
+
+unset LESS
+
