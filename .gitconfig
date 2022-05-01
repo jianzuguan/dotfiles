@@ -1,7 +1,6 @@
 [user]
 	name = Jianzu Guan
-	email = jianzuguan@luminalearning.com
-
+	email = git@jzg.fastmail.com 
 [merge]
     tool = intellij
 [mergetool "intellij"]
@@ -11,6 +10,8 @@
 	$(cd $(dirname "$BASE") && pwd)/$(basename "$BASE") \
 	$(cd $(dirname "$MERGED") && pwd)/$(basename "$MERGED")
     trustExitCode = true
-
 [pull]
-	rebase = true
+    rebase = true
+[init]
+    defaultBranch = main
+
