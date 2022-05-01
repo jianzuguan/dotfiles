@@ -107,7 +107,7 @@ alias dcu='docker-compose up -d'
 alias dcd='docker-compose down'
 alias dcr='docker-compose restart'
 alias dcl='docker-compose logs -f'
-alias dcx='docker-compose exec web'
+alias dcx='docker-compose exec'
 
 alias aws='docker run --rm -it -v ~/.aws:/root/.aws -v $(pwd):/aws amazon/aws-cli'
 
