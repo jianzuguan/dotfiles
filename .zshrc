@@ -148,10 +148,21 @@ export PATH=$PATH:$ANDROID_HOME/tools/bin
 export PATH=$PATH:$ANDROID_HOME/platform-tools
 
 # Pyenv
-#export PYENV_ROOT="$HOME/.local/share/pyenv"
-#export PATH="$PYENV_ROOT/bin:$PATH"
-#eval "$(pyenv init --path)"
-#eval "$(pyenv virtualenv-init -)"
+if [ -d "$HOME/.local/share/pyenv" ]; then
+  export PYENV_ROOT="$HOME/.local/share/pyenv"
+  export PATH="$PYENV_ROOT/bin:$PATH"
+  eval "$(pyenv init --path)"
+  #eval "$(pyenv virtualenv-init -)"
+fi
+
+# tfenv
+if [ -d "$HOME/.local/share/tfenv/bin" ]; then
+  export PATH="$HOME/.local/share/tfenv/bin:$PATH"
+fi
+
+if [ -f "$HOME/.config/circleci/circle_token" ]; then
+  export CIRCLE_TOKEN=$(cat $HOME/.config/circleci/circle_token)
+fi
 
 unset LESS
 
