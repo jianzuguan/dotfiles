@@ -77,7 +77,7 @@ ZSH_CUSTOM=$ZSH/custom
 # Custom plugins may be added to $ZSH_CUSTOM/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git zsh-autosuggestions zsh-syntax-highlighting)
+plugins=(git git-open zsh-autosuggestions zsh-syntax-highlighting)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -139,6 +139,10 @@ export PATH="$HOME/.local/bin:$HOME/bin:$PATH"
 export NVM_DIR="$HOME/.local/share/nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh" # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+
+if [ -d "/usr/local/go/bin" ]; then
+  export PATH=$PATH:/usr/local/go/bin
+fi
 
 # Android
 export ANDROID_HOME=$HOME/Library/Android/sdk

@@ -1,17 +1,12 @@
 [user]
 	name = Jianzu Guan
 	email = git@jzg.fastmail.com 
-[merge]
-    tool = intellij
-[mergetool "intellij"]
-    cmd = /usr/local/bin/idea merge \
-    	$(cd $(dirname "$LOCAL") && pwd)/$(basename "$LOCAL") \
-	$(cd $(dirname "$REMOTE") && pwd)/$(basename "$REMOTE") \
-	$(cd $(dirname "$BASE") && pwd)/$(basename "$BASE") \
-	$(cd $(dirname "$MERGED") && pwd)/$(basename "$MERGED")
-    trustExitCode = true
-[pull]
-    rebase = true
-[init]
-    defaultBranch = main
 
+[init]
+  defaultBranch = main
+
+[pull]
+  rebase = true
+
+[push]
+	default = simple

@@ -18,12 +18,13 @@ Make sure new `.zshrc` file take effect.
 
 `zsh`
 
-
 ## power level 10k
 
 `git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ${ZSH_CUSTOM:-$HOME/.local/share/oh-my-zsh/custom}/themes/powerlevel10k`
 
 ## zsh plugin
+
+`git clone https://github.com/paulirish/git-open.git $ZSH_CUSTOM/plugins/git-open`
 
 `git clone https://github.com/zsh-users/zsh-autosuggestions.git ${ZSH_CUSTOM:-$HOME/.local/share/oh-my-zsh/custom}/plugins/zsh-autosuggestions`
 

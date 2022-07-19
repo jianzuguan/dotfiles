@@ -97,10 +97,11 @@ alias vim='vim'
 # alias gp=gitpush
 # alias gu=gitupdate
 
-alias gitb='git branch | cat'
+alias gitb='git branch --sort=-committerdate'
 alias gitc='git checkout'
 alias gits='git status'
 alias gitl='git log --oneline -n 10'
+alias gitpu='git push --set-upstream origin $(git branch --show-current)'
 
 alias dc='docker-compose' 
 alias dcu='docker-compose up -d'
@@ -109,7 +110,7 @@ alias dcr='docker-compose restart'
 alias dcl='docker-compose logs -f'
 alias dcx='docker-compose exec'
 
-alias aws='docker run --rm -it -v ~/.aws:/root/.aws -v $(pwd):/aws amazon/aws-cli'
+alias aws='docker run --rm -it -v ~/.aws:/root/.aws -v $(pwd):/aws -e AWS_PROFILE amazon/aws-cli'
 
 alias lbrynet='/opt/LBRY/resources/static/daemon/lbrynet'
 alias update-grub='sudo grub-mkconfig -o /boot/grub/grub.cfg'
