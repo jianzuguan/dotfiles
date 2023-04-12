@@ -10,3 +10,5 @@
 
 [push]
 	default = simple
+[core]
+	excludesFile = ~/.config/git/ignore
