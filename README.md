@@ -1,31 +1,46 @@
 # Install
 
-`sudo apt install vim curl git zsh`
+```sh
+sudo apt install vim curl git zsh stow
+```
 
 ## oh-my-zsh
 
-`sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"`
+```sh
+sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+```
 
 Move to `$HOME/.local/share/oh-my-zsh`
-
-## install yadm
-
-`yadm clone git@github.com:jianzuguan/dotfiles.git`
 
 ## restart zsh
 
 Make sure new `.zshrc` file take effect.
 
-`zsh`
+```sh
+zsh
+```
 
 ## power level 10k
 
-`git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ${ZSH_CUSTOM:-$HOME/.local/share/oh-my-zsh/custom}/themes/powerlevel10k`
+```sh
+git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ${ZSH_CUSTOM:-$HOME/.local/share/oh-my-zsh/custom}/themes/powerlevel10k
+```
 
 ## zsh plugin
 
-`git clone https://github.com/paulirish/git-open.git $ZSH_CUSTOM/plugins/git-open`
+```sh
+git clone https://github.com/paulirish/git-open.git $ZSH_CUSTOM/plugins/git-open
+```
 
-`git clone https://github.com/zsh-users/zsh-autosuggestions.git ${ZSH_CUSTOM:-$HOME/.local/share/oh-my-zsh/custom}/plugins/zsh-autosuggestions`
+```sh
+git clone https://github.com/zsh-users/zsh-autosuggestions.git ${ZSH_CUSTOM:-$HOME/.local/share/oh-my-zsh/custom}/plugins/zsh-autosuggestions
+```
 
-`git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-$HOME/.local/share/oh-my-zsh/custom}/plugins/zsh-syntax-highlighting`
+```sh
+git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-$HOME/.local/share/oh-my-zsh/custom}/plugins/zsh-syntax-highlighting
+```
+
+## fnm
+```sh
+curl -fsSL https://fnm.vercel.app/install | bash
+```
