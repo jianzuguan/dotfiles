@@ -4,6 +4,12 @@
 sudo apt install vim curl git zsh stow
 ```
 
+```sh
+cd $HOME &&
+git@github.com:jianzuguan/dotfiles.git &&
+stow --adopt .
+```
+
 ## oh-my-zsh
 
 ```sh
@@ -41,6 +47,7 @@ git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:
 ```
 
 ## fnm
+
 ```sh
 curl -fsSL https://fnm.vercel.app/install | bash
 ```
