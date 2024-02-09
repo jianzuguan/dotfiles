@@ -168,6 +168,10 @@ if [ -f "$HOME/.config/circleci/circle_token" ]; then
   export CIRCLE_TOKEN=$(cat $HOME/.config/circleci/circle_token)
 fi
 
+# fnm
+export PATH="/home/debian/.local/share/fnm:$PATH"
+eval "$(fnm env --use-on-cd)"
+
 unset LESS
 
 
