@@ -6,7 +6,7 @@ sudo apt install vim curl git zsh stow
 
 ```sh
 cd $HOME &&
-git@github.com:jianzuguan/dotfiles.git &&
+git clone git@github.com:jianzuguan/dotfiles.git &&
 stow --adopt .
 ```
 
