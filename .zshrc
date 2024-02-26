@@ -173,5 +173,3 @@ export PATH="/home/debian/.local/share/fnm:$PATH"
 eval "$(fnm env --use-on-cd)"
 
 unset LESS
-
-

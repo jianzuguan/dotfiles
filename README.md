@@ -48,6 +48,8 @@ git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:
 
 ## fnm
 
+https://github.com/Schniz/fnm
+
 ```sh
 curl -fsSL https://fnm.vercel.app/install | bash
 ```
