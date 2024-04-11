@@ -170,6 +170,6 @@ fi
 
 # fnm
 export PATH="/home/debian/.local/share/fnm:$PATH"
-eval "$(fnm env --use-on-cd)"
+eval "$(fnm --log-level quiet env --use-on-cd)"
 
 unset LESS
