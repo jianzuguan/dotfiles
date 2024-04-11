@@ -12,3 +12,4 @@
 	default = simple
 [core]
 	excludesFile = ~/.config/git/ignore
+	autocrlf = true
