@@ -53,3 +53,13 @@ https://github.com/Schniz/fnm
 ```sh
 curl -fsSL https://fnm.vercel.app/install | bash
 ```
+
+## zoxide
+
+https://github.com/ajeetdsouza/zoxide
+
+```sh
+curl -sS https://raw.githubusercontent.com/ajeetdsouza/zoxide/main/install.sh | bash
+```
+
+

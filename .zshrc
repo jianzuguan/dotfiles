@@ -172,4 +172,7 @@ fi
 export PATH="/home/debian/.local/share/fnm:$PATH"
 eval "$(fnm --log-level quiet env --use-on-cd)"
 
+# zoxide
+eval "$(zoxide init zsh)"
+
 unset LESS
