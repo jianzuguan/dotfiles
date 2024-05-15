@@ -128,6 +128,8 @@ if [ -d "$HOME/bin" ]; then PATH="$HOME/bin:$PATH" fi
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.config/zsh/p10k.zsh ]] || source ~/.config/zsh/p10k.zsh
 
+unset LESS
+
 system_type=$(uname -s)
 if [ "$system_type" = "Darwin" ]; then
   bindkey "^[b" backward-word
@@ -169,10 +171,14 @@ if [ -f "$HOME/.config/circleci/circle_token" ]; then
 fi
 
 # fnm
-export PATH="/home/debian/.local/share/fnm:$PATH"
+if [ -d "/home/j/.local/share/fnm" ]; then
+  export PATH="/home/j/.local/share/fnm:$PATH"
+fi
+
+if [ -d "/home/debian/.local/share/fnm" ]; then
+  export PATH="/home/debian/.local/share/fnm:$PATH"
+fi
 eval "$(fnm --log-level quiet env --use-on-cd)"
 
 # zoxide
 eval "$(zoxide init zsh)"
-
-unset LESS
