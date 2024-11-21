@@ -37,7 +37,7 @@ git clone https://github.com/zsh-users/zsh-syntax-highlighting.git \
   $ZSH_CUSTOM/plugins/zsh-syntax-highlighting
 
 git clone git@github.com:jianzuguan/dotfiles.git \
-  $HOME/
+  $HOME/dotfiles
 
 cd $HOME/dotfiles
 git checkout modules
