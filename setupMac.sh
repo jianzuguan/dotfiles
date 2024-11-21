@@ -48,3 +48,5 @@ git checkout modules
 stow git
 stow vim
 stow zsh
+
+source $HOME/.zshrc
