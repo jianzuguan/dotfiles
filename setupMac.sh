@@ -4,7 +4,7 @@
 export ZSH=$HOME/.local/share/oh-my-zsh
 export ZSH_CUSTOM=$ZSH/custom
 
-/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+NONINTERACTIVE=1 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 eval "$(/opt/homebrew/bin/brew shellenv)"
 
 brew install fnm
