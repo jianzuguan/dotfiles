@@ -46,6 +46,7 @@ git clone https://github.com/jianzuguan/dotfiles.git \
 cd $HOME/dotfiles
 git checkout modules
 
+echo "---running stow---"
 stow git
 stow vim
 stow zsh
