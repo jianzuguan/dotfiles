@@ -36,6 +36,9 @@ git clone https://github.com/zsh-users/zsh-autosuggestions.git \
 git clone https://github.com/zsh-users/zsh-syntax-highlighting.git \
   $ZSH_CUSTOM/plugins/zsh-syntax-highlighting
 
+# my dot files
+mv $HOME/.zshrc $HOME/.zshrc.bak
+
 git clone https://github.com/jianzuguan/dotfiles.git \
   $HOME/dotfiles
 
