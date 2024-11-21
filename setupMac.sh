@@ -7,6 +7,7 @@ export ZSH_CUSTOM=$ZSH/custom
 NONINTERACTIVE=1 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 eval "$(/opt/homebrew/bin/brew shellenv)"
 
+brew install coreutils
 brew install fnm
 brew install git
 brew install stow
