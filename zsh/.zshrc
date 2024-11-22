@@ -115,57 +115,30 @@ autoload -U colors && colors
 PS1="%B%{$fg[red]%}[%{$fg[magenta]%}%~%{$fg[red]%}]%{$reset_color%}
 >%b "
 
-# Custom Variables
-EDITOR=vim
-
-
-# Load aliases and shortcuts if existent.
-[ -f "$HOME/.config/zsh/aliases" ] && source "$HOME/.config/zsh/aliases"
-
-if [ -d "$HOME/bin" ]; then PATH="$HOME/bin:$PATH" fi
-
-
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.config/zsh/p10k.zsh ]] || source ~/.config/zsh/p10k.zsh
 
+# Custom Variables
+EDITOR=vim
+unset LESS
+
+# Load aliases and shortcuts if existent.
+[ -f "$HOME/.config/zsh/aliases" ] && source "$HOME/.config/zsh/aliases"
+[ -f "$HOME/.config/secrets/secrets.zsh" ] && source "$HOME/.config/secrets/secrets.zsh"
+
+if [ -d "$HOME/bin" ]; then export PATH="$HOME/bin:$PATH" fi
+if [ -d "$HOME/.local/bin" ]; then export PATH="$HOME/.local/bin:$PATH" fi
+
+# Mac terminal key bindings
 system_type=$(uname -s)
 if [ "$system_type" = "Darwin" ]; then
   bindkey "^[b" backward-word
   bindkey "^[f" forward-word
 fi
 
-export PATH="$HOME/.local/bin:$HOME/bin:$PATH"
-
-export NVM_DIR="$HOME/.local/share/nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh" # This loads nvm
-[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
-
-if [ -d "/usr/local/go/bin" ]; then
-  export PATH=$PATH:/usr/local/go/bin
-fi
-
-# Android
-export ANDROID_HOME=$HOME/Library/Android/sdk
-export PATH=$PATH:$ANDROID_HOME/emulator
-export PATH=$PATH:$ANDROID_HOME/tools
-export PATH=$PATH:$ANDROID_HOME/tools/bin
-export PATH=$PATH:$ANDROID_HOME/platform-tools
-
-# Pyenv
-if [ -d "$HOME/.local/share/pyenv" ]; then
-  export PYENV_ROOT="$HOME/.local/share/pyenv"
-  export PATH="$PYENV_ROOT/bin:$PATH"
-  eval "$(pyenv init --path)"
-  #eval "$(pyenv virtualenv-init -)"
-fi
-
 # tfenv
 if [ -d "$HOME/.local/share/tfenv/bin" ]; then
   export PATH="$HOME/.local/share/tfenv/bin:$PATH"
-fi
-
-if [ -f "$HOME/.config/circleci/circle_token" ]; then
-  export CIRCLE_TOKEN=$(cat $HOME/.config/circleci/circle_token)
 fi
 
 # fnm
@@ -175,4 +148,3 @@ eval "$(fnm --log-level quiet env --use-on-cd)"
 # zoxide
 eval "$(zoxide init zsh)"
 
-unset LESS

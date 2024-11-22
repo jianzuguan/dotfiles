@@ -52,7 +52,12 @@ git checkout modules
 
 echo "---running stow---"
 stow git
+stow npm
+stow tokens
 stow vim
 stow zsh
+
+echo "--- update api tokens ---"
+cp $HOME/.config/tokens/env.example.zsh $HOME/.config/tokens/env.zsh
 
 source $HOME/.zshrc
