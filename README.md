@@ -1,5 +1,11 @@
 
-# Install
+# Mac Install
+
+```sh
+sh -c "$(curl -fsSL https://raw.githubusercontent.com/jianzuguan/dotfiles/modules/setupMac.sh)"
+```
+
+# WSL2 Install
 
 ```sh
 sudo apt install vim curl git zsh stow
@@ -9,11 +15,6 @@ sudo apt install vim curl git zsh stow
 cd $HOME &&
 git clone git@github.com:jianzuguan/dotfiles.git &&
 stow --adopt .
-```
-## Mac
-
-```sh
-sh -c "$(curl -fsSL https://raw.githubusercontent.com/jianzuguan/dotfiles/modules/setupMac.sh)"
 ```
 
 ## oh-my-zsh
