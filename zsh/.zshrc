@@ -126,8 +126,9 @@ unset LESS
 [ -f "$HOME/.config/zsh/aliases" ] && source "$HOME/.config/zsh/aliases"
 [ -f "$HOME/.config/secrets/secrets.zsh" ] && source "$HOME/.config/secrets/secrets.zsh"
 
-if [ -d "$HOME/bin" ]; then export PATH="$HOME/bin:$PATH" fi
-if [ -d "$HOME/.local/bin" ]; then export PATH="$HOME/.local/bin:$PATH" fi
+if [ -d "$HOME/bin" ]; then PATH="$HOME/bin:$PATH" fi
+if [ -d "$HOME/.local/bin" ]; then PATH="$HOME/.local/bin:$PATH" fi
+export PATH="$PATH"
 
 # Mac terminal key bindings
 system_type=$(uname -s)
@@ -147,4 +148,3 @@ eval "$(fnm --log-level quiet env --use-on-cd)"
 
 # zoxide
 eval "$(zoxide init zsh)"
-
