@@ -9,6 +9,7 @@ eval "$(/opt/homebrew/bin/brew shellenv)"
 
 brew install coreutils
 brew install fnm
+brew install gh
 brew install git
 brew install ollama
 brew install stats
