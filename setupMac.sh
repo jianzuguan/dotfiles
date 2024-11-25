@@ -24,6 +24,7 @@ brew install --cask grammarly-desktop
 brew install --cask logi-options+
 brew install --cask loop # window manager
 brew install --cask obsidian
+brew install --cask visual-studio-code
 
 # install on-my-zsh
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)" "" --unattended
