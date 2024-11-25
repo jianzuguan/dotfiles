@@ -21,7 +21,7 @@ brew install --cask alt-tab
 brew install --cask arc
 brew install --cask bitwarden
 brew install --cask grammarly-desktop
-brew install --cask logitech-options
+brew install --cask logi-options+
 brew install --cask loop # window manager
 brew install --cask obsidian
 
