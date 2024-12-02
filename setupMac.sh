@@ -11,7 +11,6 @@ brew install coreutils
 brew install fnm
 brew install gh
 brew install git
-brew install ollama
 brew install stats
 brew install stow
 brew install tfenv
@@ -24,6 +23,7 @@ brew install --cask grammarly-desktop
 brew install --cask logi-options+
 brew install --cask loop # window manager
 brew install --cask obsidian
+brew install --cask ollama
 brew install --cask visual-studio-code
 
 # install on-my-zsh
