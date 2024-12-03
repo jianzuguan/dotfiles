@@ -150,6 +150,10 @@ eval "$(fnm --log-level quiet env --use-on-cd)"
 eval "$(zoxide init zsh)"
 
 # python
+if [ -d "$HOME/Library/Python/3.9/bin" ]; then 
+  export PATH="$HOME/Library/Python/3.9/bin:$PATH" 
+fi
+
 if [ -d "$HOME/Library/Python/3.9/lib/python/site-packages" ]; then 
   export PATH="$HOME/Library/Python/3.9/lib/python/site-packages:$PATH" 
 fi
