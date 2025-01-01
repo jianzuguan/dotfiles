@@ -26,12 +26,7 @@ ex ()
 
 export EDITOR=vim
 
-system_type=$(uname)
-if [ "$system_type" = "Darwin" ]; then
-  alias lsdf='gls -Ahlv --color --group-directories-first'
-else
-  alias lsdf='ls -Ahlv --color --group-directories-first'
-fi
+alias lsdf='ls -Ahlv --color --group-directories-first'
 alias ls='ls'
 # alias ll='ls -l'
 # ls, the common ones I use a lot shortened for rapid fire usage
