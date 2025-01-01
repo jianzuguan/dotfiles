@@ -14,3 +14,10 @@
 [push]
 	default = simple
 	autoSetupRemote = true
+
+[alias]
+	a = add
+	b = branch --sort=-committerdate
+	c = checkout
+	s = status
+	l = log --oneline -n 10
