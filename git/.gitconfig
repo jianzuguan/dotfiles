@@ -17,6 +17,7 @@
 
 [alias]
 	a = add
+	aa = add .
 	b = branch --sort=-committerdate
 	c = checkout
 	s = status
