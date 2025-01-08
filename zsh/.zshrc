@@ -143,8 +143,10 @@ if [ -d "$HOME/.local/share/tfenv/bin" ]; then
 fi
 
 # fnm
-export PATH="/home/debian/.local/share/fnm:$PATH"
-eval "$(fnm --log-level quiet env --use-on-cd)"
+if [ -d "$HOME/.local/share/fnm" ]; then
+  export PATH="$HOME/.local/share/fnm:$PATH"
+  eval "$(fnm --log-level quiet env --use-on-cd)"
+fi
 
 # zoxide
 eval "$(zoxide init zsh)"
