@@ -157,7 +157,3 @@ fi
 if [ -d "$HOME/Library/Python/3.9/lib/python/site-packages" ]; then 
   export PATH="$HOME/Library/Python/3.9/lib/python/site-packages:$PATH" 
 fi
-
-# aws
-export AWS_CONFIG_FILE=$HOME/.config/aws/config
-export AWS_SHARED_CREDENTIALS_FILE=$HOME/.config/aws/credentials
