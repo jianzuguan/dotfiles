@@ -21,4 +21,6 @@
 	b = branch --sort=-committerdate
 	c = checkout
 	s = status
+	sts = stash
+	stsp = stash pop
 	l = log --oneline -n 10
