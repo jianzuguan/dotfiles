@@ -24,11 +24,8 @@ ex ()
   fi
 }
 
-export EDITOR=vim
-
-alias lsdf='ls -Ahlv --color --group-directories-first'
-alias ls='ls'
 # alias ll='ls -l'
+alias lsdf='ls -Ahlv --color --group-directories-first'
 # ls, the common ones I use a lot shortened for rapid fire usage
 # alias l='ls -lFh'     #size,show type,human readable
 # alias la='ls -lAFh'   #long list,show almost all,show type,human readable
@@ -66,7 +63,6 @@ alias ff='find . -type f -name'
 
 alias h='history'
 alias hgrep="fc -El 0 | grep"
-# alias help='man'
 alias p='ps -f'
 alias sortnr='sort -n -r'
 alias unexport='unset'
@@ -74,29 +70,6 @@ alias unexport='unset'
 alias rm='rm -i'
 alias cp='cp -i'
 alias mv='mv -i'
-alias vim='vim'
-# alias vi='vim'
-# alias gds-start='sudo systemctl start openvpn-client@gds'
-# alias gds-stop='sudo systemctl stop openvpn-client@gds'
-# gitpush() {
-#     git add .
-#     git commit -m "$*"
-#     git pull
-#     git push
-# }
-# gitupdate() {
-#     eval "$(ssh-agent -s)"
-#     ssh-add ~/.ssh/github
-#     ssh -T git@github.com
-# }
-# alias gp=gitpush
-# alias gu=gitupdate
-
-alias gitb='git branch --sort=-committerdate'
-alias gitc='git checkout'
-alias gits='git status'
-alias gitl='git log --oneline -n 10'
-alias gitpu='git push --set-upstream origin $(git branch --show-current)'
 
 alias dc='docker-compose' 
 alias dcu='docker-compose up -d'
@@ -106,9 +79,6 @@ alias dcl='docker-compose logs -f'
 alias dcx='docker-compose exec'
 
 # alias aws='docker run --rm -it -v ~/.aws:/root/.aws -v $(pwd):/aws -e AWS_PROFILE amazon/aws-cli'
-
-alias lbrynet='/opt/LBRY/resources/static/daemon/lbrynet'
-alias update-grub='sudo grub-mkconfig -o /boot/grub/grub.cfg'
 
 # Granted
 alias assume='source /usr/local/bin/assume'

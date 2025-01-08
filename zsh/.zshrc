@@ -119,11 +119,11 @@ PS1="%B%{$fg[red]%}[%{$fg[magenta]%}%~%{$fg[red]%}]%{$reset_color%}
 [[ ! -f ~/.config/zsh/p10k.zsh ]] || source ~/.config/zsh/p10k.zsh
 
 # Custom Variables
-EDITOR=vim
+export EDITOR=vim
 unset LESS
 
 # Load aliases and shortcuts if existent.
-[ -f "$HOME/.config/zsh/aliases" ] && source "$HOME/.config/zsh/aliases"
+[ -f "$HOME/.config/zsh/aliases.zsh" ] && source "$HOME/.config/zsh/aliases.zsh"
 [ -f "$HOME/.config/secrets/secrets.zsh" ] && source "$HOME/.config/secrets/secrets.zsh"
 
 if [ -d "$HOME/bin" ]; then PATH="$HOME/bin:$PATH" fi
