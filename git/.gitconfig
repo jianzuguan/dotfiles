@@ -20,6 +20,7 @@
 	aa = add .
 	b = branch --sort=-committerdate
 	c = checkout
+	cb = checkout -b
 	s = status
 	sts = stash
 	stsp = stash pop
