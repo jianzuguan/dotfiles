@@ -71,12 +71,12 @@ alias rm='rm -i'
 alias cp='cp -i'
 alias mv='mv -i'
 
-alias dc='docker-compose' 
-alias dcu='docker-compose up -d'
-alias dcd='docker-compose down'
-alias dcr='docker-compose restart'
-alias dcl='docker-compose logs -f'
-alias dcx='docker-compose exec'
+alias dc='docker compose' 
+alias dcu='docker compose up -d'
+alias dcd='docker compose down'
+alias dcr='docker compose restart'
+alias dcl='docker compose logs -f'
+alias dcx='docker compose exec'
 
 # alias aws='docker run --rm -it -v ~/.aws:/root/.aws -v $(pwd):/aws -e AWS_PROFILE amazon/aws-cli'
 
@@ -85,4 +85,12 @@ alias assume='source /usr/local/bin/assume'
 
 jwt-decode() {
   jq -R 'split(".") |.[0:2] | map(gsub("-"; "+") | gsub("_"; "/") | gsub("%3D"; "=") | @base64d) | map(fromjson)' <<< $1
+}
+
+dcpu() {
+  docker compose --profile $1 up -d
+}
+
+dcpd() {
+  docker compose --profile $1 down "${@:2}"
 }
