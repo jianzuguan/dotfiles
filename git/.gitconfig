@@ -1,9 +1,9 @@
 [user]
-	name = Jianzu Guan
-	email = git@jzg.fastmail.com 
+  name = Jianzu Guan
+  email = git@jzg.fastmail.com 
 
 [core]
-	excludesFile = ~/.config/git/ignore
+  excludesFile = ~/.config/git/ignore
 
 [init]
   defaultBranch = main
@@ -12,17 +12,17 @@
   rebase = true
 
 [push]
-	default = simple
-	autoSetupRemote = true
+  default = simple
+  autoSetupRemote = true
 
 [alias]
-	a = add
-	aa = add .
-	b = branch --sort=-committerdate
-	bn = checkout -b
-	c = checkout
+  a = add
+  aa = add .
+  b = branch --sort=-committerdate
+  bn = checkout -b
+  c = checkout
   coi = "!git checkout $(git branch --sort=-committerdate | grep -v HEAD | sed 's/^[* ] //' | fzf)"
-	s = status
-	sts = stash
-	stsp = stash pop
-	l = log --oneline -n 10
+  s = status
+  sts = stash
+  stsp = stash pop
+  l = log --oneline -n 10
