@@ -78,6 +78,7 @@ alias dcr='docker compose restart'
 alias dcl='docker compose logs -f'
 alias dcx='docker compose exec'
 
+alias pn='pnpm'
 # alias aws='docker run --rm -it -v ~/.aws:/root/.aws -v $(pwd):/aws -e AWS_PROFILE amazon/aws-cli'
 
 # Granted
