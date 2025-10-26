@@ -1,7 +1,7 @@
 #! /bin/bash
 
 # on-my-zsh config
-export ZSH=$HOME/.local/share/oh-my-zsh
+export ZSH=$HOME/.config/oh-my-zsh
 export ZSH_CUSTOM=$ZSH/custom
 
 NONINTERACTIVE=1 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
