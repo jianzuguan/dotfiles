@@ -150,7 +150,7 @@ fi
 # fnm
 if [ -d "$HOME/.local/share/fnm" ]; then
   export PATH="$HOME/.local/share/fnm:$PATH"
-  eval "$(fnm --log-level quiet env --use-on-cd)"
+  eval "$(fnm env --use-on-cd --version-file-strategy=recursive --corepack-enabled --resolve-engines --shell zsh)"
 fi
 
 # zoxide
