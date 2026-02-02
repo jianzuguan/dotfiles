@@ -20,9 +20,7 @@ brew install tfenv
 brew install zoxide
 
 brew install --cask alt-tab
-brew install --cask arc
 brew install --cask bitwarden
-brew install --cask grammarly-desktop
 brew install --cask logi-options+
 brew install --cask mpv
 brew install --cask obsidian
