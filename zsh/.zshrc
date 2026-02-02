@@ -148,10 +148,10 @@ if [ -d "$HOME/.local/share/tfenv/bin" ]; then
 fi
 
 # fnm
-if [ -d "$HOME/.local/share/fnm" ]; then
-  export PATH="$HOME/.local/share/fnm:$PATH"
-  eval "$(fnm env --use-on-cd --version-file-strategy=recursive --corepack-enabled --resolve-engines --shell zsh)"
-fi
+# if [ -d "$HOME/.local/share/fnm" ]; then
+#   export PATH="$HOME/.local/share/fnm:$PATH"
+#   eval "$(fnm env --use-on-cd --version-file-strategy=recursive --corepack-enabled --resolve-engines --shell zsh)"
+# fi
 
 # zoxide
 eval "$(zoxide init zsh)"

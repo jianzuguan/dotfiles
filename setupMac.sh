@@ -9,8 +9,11 @@ eval "$(/opt/homebrew/bin/brew shellenv)"
 
 brew install coreutils
 brew install fnm
+brew install fzf
 brew install gh
 brew install git
+brew install jq
+brew install lsd
 brew install stats
 brew install stow
 brew install tfenv
@@ -21,6 +24,7 @@ brew install --cask arc
 brew install --cask bitwarden
 brew install --cask grammarly-desktop
 brew install --cask logi-options+
+brew install --cask mpv
 brew install --cask obsidian
 brew install --cask ollama
 brew install --cask visual-studio-code
@@ -52,6 +56,7 @@ cd $HOME/dotfiles
 git checkout modules
 
 echo "---running stow---"
+stow lsd
 stow git
 stow npm
 stow tokens

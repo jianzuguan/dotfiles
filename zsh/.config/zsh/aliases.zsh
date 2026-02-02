@@ -25,7 +25,8 @@ ex ()
 }
 
 # alias ll='ls -l'
-alias lsdf='ls -Ahlv --color --group-directories-first'
+# alias lsdf='ls -Ahlv --color --group-directories-first'
+alias lsdf='lsd -al'
 # ls, the common ones I use a lot shortened for rapid fire usage
 # alias l='ls -lFh'     #size,show type,human readable
 # alias la='ls -lAFh'   #long list,show almost all,show type,human readable
