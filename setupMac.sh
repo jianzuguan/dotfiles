@@ -19,6 +19,9 @@ brew install stow
 brew install tfenv
 brew install zoxide
 
+brew install kubelogin
+brew install kubernetes-cli
+
 brew install --cask alt-tab
 brew install --cask bitwarden
 brew install --cask logi-options+

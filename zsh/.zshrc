@@ -1,7 +1,9 @@
 export XDG_CONFIG_HOME="$HOME/.config"
-export XDG_DATA_HOME="$HOME/.local/share"
 export XDG_CACHE_HOME="$HOME/.cache"
-export XDG_RUNTIME_DIR="/run/user/$(id -u)"
+export XDG_DATA_HOME="$HOME/.local/share"
+export XDG_STATE_HOME="$HOME/.local/state"
+# export XDG_RUNTIME_DIR="/run/user/$(id -u)"
+export NVM_DIR="$HOME/.local/share/nvm"
 
 # Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
 # Initialization code that may require console input (password prompts, [y/n]
@@ -148,10 +150,15 @@ if [ -d "$HOME/.local/share/tfenv/bin" ]; then
 fi
 
 # fnm
+# eval "$(fnm env --use-on-cd --shell zsh)"
 # if [ -d "$HOME/.local/share/fnm" ]; then
-#   export PATH="$HOME/.local/share/fnm:$PATH"
-#   eval "$(fnm env --use-on-cd --version-file-strategy=recursive --corepack-enabled --resolve-engines --shell zsh)"
+  # export PATH="$HOME/.local/share/fnm:$PATH"
+  # eval "$(fnm env --use-on-cd --version-file-strategy=recursive --corepack-enabled --resolve-engines --shell zsh)"
 # fi
+# [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh" # This loads nvm
+# [ -s "$NVM_DIR/zsh_completion" ] && \. "$NVM_DIR/zsh_completion"  # This loads nvm zsh_completion
+[ -s "/opt/homebrew/opt/nvm/nvm.sh" ] && \. "/opt/homebrew/opt/nvm/nvm.sh"  # This loads nvm
+[ -s "/opt/homebrew/opt/nvm/etc/bash_completion.d/nvm" ] && \. "/opt/homebrew/opt/nvm/etc/bash_completion.d/nvm"  # This loads nvm bash_completion
 
 # zoxide
 eval "$(zoxide init zsh)"
