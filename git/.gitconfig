@@ -23,6 +23,7 @@
   c = checkout
   coi = "!git checkout $(git branch --sort=-committerdate | grep -v HEAD | sed 's/^[* ] //' | fzf)"
   s = status
+  sc = switch -c
   sts = stash
   stsp = stash pop
   l = log --oneline -n 10
