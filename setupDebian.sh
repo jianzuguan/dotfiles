@@ -8,6 +8,7 @@ sudo apt update
 sudo apt install -y \
 curl \
 git \
+lsd \
 stow \
 zoxide \
 ;
@@ -41,11 +42,11 @@ git checkout modules
 echo "---running stow---"
 stow git
 stow npm
-stow tokens
+stow secrets
 stow vim
 stow zsh
 
-echo "--- update api tokens ---"
-cp $HOME/.config/tokens/env.example.zsh $HOME/.config/tokens/env.zsh
+echo "--- update api secrets ---"
+cp $HOME/.config/secrets/secrets.example.zsh $HOME/.config/secrets/secrets.zsh
 
 source $HOME/.zshrc
