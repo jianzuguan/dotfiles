@@ -13,6 +13,9 @@ stow \
 zoxide \
 ;
 
+# herdr
+curl -fsSL https://herdr.dev/install.sh | sh
+
 # install on-my-zsh
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)" "" --unattended
 
@@ -41,6 +44,7 @@ git checkout modules
 
 echo "---running stow---"
 stow git
+stow herdr
 stow npm
 stow secrets
 stow vim
