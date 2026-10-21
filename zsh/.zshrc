@@ -112,7 +112,7 @@ source $ZSH/oh-my-zsh.sh
 #
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
-# alias ohmyzsh="mate ~/.oh-my-zsh"# Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
+# alias ohmyzsh="mate ~/.oh-my-zsh"
 # Initialization code that may require console input (password prompts, [y/n]
 # confirmations, etc.) must go above this block; everything else may go below.
 
@@ -171,3 +171,6 @@ fi
 if [ -d "$HOME/Library/Python/3.9/lib/python/site-packages" ]; then 
   export PATH="$HOME/Library/Python/3.9/lib/python/site-packages:$PATH" 
 fi
+
+# uv
+[ -f "$HOME/.local/bin/env" ] && . "$HOME/.local/bin/env"
