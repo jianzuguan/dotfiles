@@ -11,6 +11,7 @@ brew install coreutils
 brew install fnm
 brew install fzf
 brew install gh
+brew install herdr
 brew install git
 brew install jq
 brew install lsd
@@ -59,6 +60,7 @@ git checkout modules
 echo "---running stow---"
 stow lsd
 stow git
+stow herdr
 stow npm
 stow tokens
 stow vim
