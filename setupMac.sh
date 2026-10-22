@@ -30,10 +30,12 @@ brew install --cask brave-browser
 brew install --cask claude
 brew install --cask claude-code
 brew install --cask google-chrome
+brew install --cask languagetool-desktop
 brew install --cask mpv
 brew install --cask obs
 brew install --cask obsidian
 brew install --cask openlogi
+brew install --cask rectangle
 brew install --cask slack
 brew install --cask visual-studio-code
 
