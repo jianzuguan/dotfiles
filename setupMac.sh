@@ -11,10 +11,11 @@ brew install coreutils
 brew install fnm
 brew install fzf
 brew install gh
-brew install herdr
 brew install git
+brew install herdr
 brew install jq
 brew install lsd
+brew install oven-sh/bun/bun
 brew install stats
 brew install stow
 brew install tfenv
@@ -25,10 +26,15 @@ brew install kubernetes-cli
 
 brew install --cask alt-tab
 brew install --cask bitwarden
-brew install --cask logi-options+
+brew install --cask brave-browser
+brew install --cask claude
+brew install --cask claude-code
+brew install --cask google-chrome
 brew install --cask mpv
+brew install --cask obs
 brew install --cask obsidian
-brew install --cask ollama
+brew install --cask openlogi
+brew install --cask slack
 brew install --cask visual-studio-code
 
 # install on-my-zsh
