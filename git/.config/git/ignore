@@ -1,0 +1,6 @@
+temp-*.json
+tmp-lambda-size
+kmi-utils
+zo-gh-instructions
+
+**/.claude/settings.local.json

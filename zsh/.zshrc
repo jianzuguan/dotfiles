@@ -1,3 +1,10 @@
+export XDG_CONFIG_HOME="$HOME/.config"
+export XDG_CACHE_HOME="$HOME/.cache"
+export XDG_DATA_HOME="$HOME/.local/share"
+export XDG_STATE_HOME="$HOME/.local/state"
+# export XDG_RUNTIME_DIR="/run/user/$(id -u)"
+export NVM_DIR="$HOME/.local/share/nvm"
+
 # Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
 # Initialization code that may require console input (password prompts, [y/n]
 # confirmations, etc.) must go above this block; everything else may go below.
@@ -9,7 +16,7 @@ fi
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 
 # Path to your oh-my-zsh installation.
-export ZSH=$HOME/.local/share/oh-my-zsh
+export ZSH=$HOME/.config/oh-my-zsh
 
 # Set name of the theme to load --- if set to "random", it will
 # load a random theme each time oh-my-zsh is loaded, in which case,
@@ -67,7 +74,7 @@ ZSH_THEME="powerlevel10k/powerlevel10k"
 # "mm/dd/yyyy"|"dd.mm.yyyy"|"yyyy-mm-dd"
 # or set a custom format using the strftime function format specifications,
 # see 'man strftime' for details.
-# HIST_STAMPS="mm/dd/yyyy"
+HIST_STAMPS="%y-%m-%d %T"
 
 # Would you like to use another custom folder than $ZSH/custom?
 ZSH_CUSTOM=$ZSH/custom
@@ -105,7 +112,7 @@ source $ZSH/oh-my-zsh.sh
 #
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
-# alias ohmyzsh="mate ~/.oh-my-zsh"# Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
+# alias ohmyzsh="mate ~/.oh-my-zsh"
 # Initialization code that may require console input (password prompts, [y/n]
 # confirmations, etc.) must go above this block; everything else may go below.
 
@@ -115,50 +122,26 @@ autoload -U colors && colors
 PS1="%B%{$fg[red]%}[%{$fg[magenta]%}%~%{$fg[red]%}]%{$reset_color%}
 >%b "
 
-# Custom Variables
-EDITOR=vim
-
-
-# Load aliases and shortcuts if existent.
-[ -f "$HOME/.config/zsh/aliases" ] && source "$HOME/.config/zsh/aliases"
-
-if [ -d "$HOME/bin" ]; then PATH="$HOME/bin:$PATH" fi
-
-
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.config/zsh/p10k.zsh ]] || source ~/.config/zsh/p10k.zsh
 
+# Custom Variables
+export EDITOR=vim
 unset LESS
 
+# Load aliases and shortcuts if existent.
+[ -f "$HOME/.config/zsh/aliases.zsh" ] && source "$HOME/.config/zsh/aliases.zsh"
+[ -f "$HOME/.config/secrets/secrets.zsh" ] && source "$HOME/.config/secrets/secrets.zsh"
+
+if [ -d "$HOME/bin" ]; then PATH="$HOME/bin:$PATH" fi
+if [ -d "$HOME/.local/bin" ]; then PATH="$HOME/.local/bin:$PATH" fi
+export PATH="$PATH"
+
+# Mac terminal key bindings
 system_type=$(uname -s)
 if [ "$system_type" = "Darwin" ]; then
   bindkey "^[b" backward-word
   bindkey "^[f" forward-word
-fi
-
-export PATH="$HOME/.local/bin:$HOME/bin:$PATH"
-
-export NVM_DIR="$HOME/.local/share/nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh" # This loads nvm
-[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
-
-if [ -d "/usr/local/go/bin" ]; then
-  export PATH=$PATH:/usr/local/go/bin
-fi
-
-# Android
-export ANDROID_HOME=$HOME/Library/Android/sdk
-export PATH=$PATH:$ANDROID_HOME/emulator
-export PATH=$PATH:$ANDROID_HOME/tools
-export PATH=$PATH:$ANDROID_HOME/tools/bin
-export PATH=$PATH:$ANDROID_HOME/platform-tools
-
-# Pyenv
-if [ -d "$HOME/.local/share/pyenv" ]; then
-  export PYENV_ROOT="$HOME/.local/share/pyenv"
-  export PATH="$PYENV_ROOT/bin:$PATH"
-  eval "$(pyenv init --path)"
-  #eval "$(pyenv virtualenv-init -)"
 fi
 
 # tfenv
@@ -166,19 +149,33 @@ if [ -d "$HOME/.local/share/tfenv/bin" ]; then
   export PATH="$HOME/.local/share/tfenv/bin:$PATH"
 fi
 
-if [ -f "$HOME/.config/circleci/circle_token" ]; then
-  export CIRCLE_TOKEN=$(cat $HOME/.config/circleci/circle_token)
-fi
-
 # fnm
-if [ -d "/home/j/.local/share/fnm" ]; then
-  export PATH="/home/j/.local/share/fnm:$PATH"
-fi
-
-if [ -d "/home/debian/.local/share/fnm" ]; then
-  export PATH="/home/debian/.local/share/fnm:$PATH"
-fi
-eval "$(fnm --log-level quiet env --use-on-cd)"
+# eval "$(fnm env --use-on-cd --shell zsh)"
+# if [ -d "$HOME/.local/share/fnm" ]; then
+  # export PATH="$HOME/.local/share/fnm:$PATH"
+  # eval "$(fnm env --use-on-cd --version-file-strategy=recursive --corepack-enabled --resolve-engines --shell zsh)"
+# fi
+# [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh" # This loads nvm
+# [ -s "$NVM_DIR/zsh_completion" ] && \. "$NVM_DIR/zsh_completion"  # This loads nvm zsh_completion
+[ -s "/opt/homebrew/opt/nvm/nvm.sh" ] && \. "/opt/homebrew/opt/nvm/nvm.sh"  # This loads nvm
+[ -s "/opt/homebrew/opt/nvm/etc/bash_completion.d/nvm" ] && \. "/opt/homebrew/opt/nvm/etc/bash_completion.d/nvm"  # This loads nvm bash_completion
 
 # zoxide
 eval "$(zoxide init zsh)"
+
+# python
+if [ -d "$HOME/Library/Python/3.9/bin" ]; then 
+  export PATH="$HOME/Library/Python/3.9/bin:$PATH" 
+fi
+
+if [ -d "$HOME/Library/Python/3.9/lib/python/site-packages" ]; then 
+  export PATH="$HOME/Library/Python/3.9/lib/python/site-packages:$PATH" 
+fi
+
+# uv
+[ -f "$HOME/.local/bin/env" ] && . "$HOME/.local/bin/env"
+# The following lines have been added by Docker Desktop to enable Docker CLI completions.
+fpath=(/Users/z/.docker/completions $fpath)
+autoload -Uz compinit
+(( ${+_comps[docker]} )) || compinit
+# End of Docker CLI completions
