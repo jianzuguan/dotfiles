@@ -61,18 +61,18 @@ git clone https://github.com/jianzuguan/dotfiles.git \
   $HOME/dotfiles
 
 cd $HOME/dotfiles
-git checkout modules
+git checkout main
 
 echo "---running stow---"
 stow lsd
 stow git
 stow herdr
 stow npm
-stow tokens
+stow secrets
 stow vim
 stow zsh
 
-echo "--- update api tokens ---"
-cp $HOME/.config/tokens/env.example.zsh $HOME/.config/tokens/env.zsh
+echo "--- update api secrets ---"
+cp $HOME/.config/secrets/secrets.example.zsh $HOME/.config/secrets/secrets.zsh
 
 source $HOME/.zshrc
