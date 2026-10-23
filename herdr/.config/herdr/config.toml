@@ -2,6 +2,7 @@ onboarding = false
 
 [ui]
 status_indicators = "symbols"
+sidebar_max_width = 65
 
 [ui.toast]
 delivery = "herdr"
